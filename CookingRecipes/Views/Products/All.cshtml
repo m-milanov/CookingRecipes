@@ -1,0 +1,32 @@
+@model IEnumerable<ProductListingViewModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h1 class="text-center mt-5">List of all available products</h1>
+<div class="row mt-5">
+    @foreach (var product in Model)
+    {
+
+        <div class="col-4">
+            <div class="card" style="">
+                <img class="card-img-top" src="@product.ImageUrl" alt="Image of @product.Name" style="height:180px">
+                <div class="card-body">
+                    <h5 class="card-title">@product.Name</h5>
+                    <p class="card-text">This product is measured in @product.Units.</p>
+                    <a asp-controller="products" asp-action="Details" asp-route-id="@product.Id" class="btn btn-primary">Details</a>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+    
+
+
+<div class="d-flex justify-content-center mt-5">
+    <button type="button" class="btn btn-primary btn-lg btn-block w-25 p-3  justify-content-center">
+        <a class="text-white" href="/Products/Add">Add Product</a>
+    </button>
+</div>
+    

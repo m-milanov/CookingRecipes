@@ -1,0 +1,33 @@
+@model AddProductFormModel
+@{
+    ViewData["Title"] = "Add Product";
+}     
+
+
+<div class="row px-20">
+    <form method="post" class="w-100">
+        <div class="form-row">
+            <div class="form-group col-6">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" placeholder="Enter name...">
+                <span asp-validation-for="Name" class="small text-danger"></span>
+            </div>
+
+            <div class="form-group col-6">
+                <label asp-for="Units">Units Type</label>
+                <select asp-for="Units" class="form-control">
+                    <option>Grams</option>
+                    <option>Mililiters</option>
+                    <option>Pieces</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ImageUrl">Image Url</label>
+            <input asp-for="ImageUrl" class="form-control" id="imageUrl" rows="3"></input>
+            <span asp-validation-for="ImageUrl" class="small text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+</div>
