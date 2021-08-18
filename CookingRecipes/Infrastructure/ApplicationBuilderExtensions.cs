@@ -14,6 +14,8 @@ namespace CookingRecipes.Infrastructure
         {
             using var scopedServices = app.ApplicationServices.CreateScope();
             var data = scopedServices.ServiceProvider.GetService<CookingRecipesDbContext>();
+
+            //data.Database.EnsureDeleted();
             data.Database.Migrate();
             SeedProducts(data);
 
@@ -25,7 +27,6 @@ namespace CookingRecipes.Infrastructure
             if (data.Products.Any())
                 return;
 
-            data.Products.Add(new Product { Name = "Egg", Units = "Number", });
             data.SaveChanges();
         }
     }

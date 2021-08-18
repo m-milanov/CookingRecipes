@@ -23,11 +23,36 @@
             </div>
         </div>
 
+        <div class="form-row">
+            <div class="form-group col-4">
+                <label asp-for="Calories"></label>
+                <input asp-for="Calories" class="form-control" placeholder="">
+                <span asp-validation-for="Calories" class="small text-danger"></span>
+            </div>
+            <div class="form-group col-4">
+                <label asp-for="Protein"></label>
+                <input asp-for="Protein" class="form-control" placeholder="">
+                <span asp-validation-for="Protein" class="small text-danger"></span>
+            </div>
+            <div class="form-group col-4">
+                <label asp-for="Fat"></label>
+                <input asp-for="Fat" class="form-control" placeholder="">
+                <span asp-validation-for="Fat" class="small text-danger"></span>
+            </div>
+        </div>
+        
         <div class="form-group">
-            <label asp-for="ImageUrl">Image Url</label>
-            <input asp-for="ImageUrl" class="form-control" id="imageUrl" rows="3"></input>
+            <label asp-for="Description">Description</label>
+            <textarea asp-for="Description" class="form-control" rows="3"></textarea>
             <span asp-validation-for="ImageUrl" class="small text-danger"></span>
         </div>
+
+        <div class="form-group">
+            <label asp-for="ImageUrl">Image Url</label>
+            <input asp-for="ImageUrl" class="form-control"></input>
+            <span asp-validation-for="ImageUrl" class="small text-danger"></span>
+        </div>
+
         <button type="submit" class="btn btn-primary">Add</button>
     </form>
 </div>

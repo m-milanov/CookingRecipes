@@ -13,9 +13,10 @@ namespace CookingRecipes.Data.Models
         public string Name { get; set; }
 
         public int TimeToCook { get; set; }
-        public int Temperature { get; set; }
 
         public int TimeToPrepare { get; set; }
+
+        public int Temperature { get; set; }
 
         [Required]
         public ICollection<ProductInRecipe> Products { get; set; }

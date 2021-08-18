@@ -1,4 +1,6 @@
-﻿@{
+﻿@model StatisticsIndexViewModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 <div class="jumbotron jumbotron-fluid">
@@ -6,6 +8,18 @@
         <h1 class="display-4">Welcome to my website for cooking recipes</h1>
         <p>Here you can store all of your cooking recipes and share them with your friends.</p>
         <hr class="my-4">
-        <p>To use all the features you need to login.</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-4 text-center h3">
+                    Total products: @Model.TotalProducts
+                </div>
+                <div class="col-4 text-center h3">
+                    Total recipes: @Model.TotalRecipes
+                </div>
+                <div class="col-4 text-center h3">
+                    Total users: @Model.TotalUsers
+                </div>
+            </div>
+        </div>
     </div>
 </div>

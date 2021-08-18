@@ -33,8 +33,15 @@ using CookingRecipes.Models.Products;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Code\SoftUny\CookingRecipesWebsite(ASP.NET)\CookingRecipes\CookingRecipes\Views\_ViewImports.cshtml"
+using CookingRecipes.Models.Home;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9a5a4def29a60dd29f929adaad31a5f999d7dc35", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1231aecfe65e37978bb608230d394ed5337b176e", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

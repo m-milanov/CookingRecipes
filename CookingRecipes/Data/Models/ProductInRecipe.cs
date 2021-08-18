@@ -15,8 +15,10 @@ namespace CookingRecipes.Data.Models
 
         public int Price { get; set; }
 
+        public string Specification{ get; set; }
+
         public int RecipeId { get; set; }
-        [Required]
+
         public Recipe Recipe { get; set; }
     }
 }

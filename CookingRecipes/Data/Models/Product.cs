@@ -14,8 +14,17 @@ namespace CookingRecipes.Data.Models
 
         [Required]
         public string Units { get; set; }
-
+        [Required]
         public string ImageUrl { get; set; }
+
+        public int Calories { get; set; }
+
+        public int Protein { get; set; }
+
+        public int Fat { get; set; }
+
+        [Required]
+        public string Description { get; set; }
 
         public IEnumerable<ProductInRecipe> ProductsInRecipes { get; set; }
     }
